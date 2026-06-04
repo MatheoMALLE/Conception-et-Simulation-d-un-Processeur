@@ -187,11 +187,12 @@
     <wire from="(1480,190)" to="(1510,190)"/>
     <wire from="(1490,170)" to="(1510,170)"/>
     <wire from="(1490,40)" to="(1490,170)"/>
-    <wire from="(180,30)" to="(1200,30)"/>
-    <wire from="(180,30)" to="(180,50)"/>
+    <wire from="(160,30)" to="(1200,30)"/>
+    <wire from="(160,30)" to="(160,90)"/>
+    <wire from="(160,90)" to="(180,90)"/>
     <wire from="(30,310)" to="(140,310)"/>
-    <wire from="(30,90)" to="(180,90)"/>
-    <wire from="(30,90)" to="(30,310)"/>
+    <wire from="(30,50)" to="(180,50)"/>
+    <wire from="(30,50)" to="(30,310)"/>
     <wire from="(40,70)" to="(180,70)"/>
     <wire from="(40,70)" to="(40,790)"/>
     <wire from="(40,790)" to="(770,790)"/>
@@ -2423,7 +2424,7 @@
       <a name="output" val="true"/>
       <a name="width" val="2"/>
     </comp>
-    <comp lib="0" loc="(1350,580)" name="Pin">
+    <comp lib="0" loc="(1340,590)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="facing" val="west"/>
       <a name="label" val="WE"/>
@@ -2607,10 +2608,10 @@
       <a name="label" val="Jeq"/>
       <a name="output" val="true"/>
     </comp>
-    <comp lib="1" loc="(1020,580)" name="OR Gate">
-      <a name="inputs" val="5"/>
+    <comp lib="1" loc="(1040,590)" name="OR Gate">
+      <a name="inputs" val="6"/>
     </comp>
-    <comp lib="1" loc="(1190,580)" name="NOT Gate"/>
+    <comp lib="1" loc="(1180,590)" name="NOT Gate"/>
     <comp lib="2" loc="(1330,540)" name="Priority Encoder">
       <a name="select" val="2"/>
     </comp>
@@ -2622,8 +2623,8 @@
       <a name="width" val="24"/>
     </comp>
     <comp loc="(920,620)" name="InstructionOrUAL"/>
-    <wire from="(1020,580)" to="(1160,580)"/>
-    <wire from="(1190,580)" to="(1350,580)"/>
+    <wire from="(1040,590)" to="(1150,590)"/>
+    <wire from="(1180,590)" to="(1340,590)"/>
     <wire from="(1270,530)" to="(1290,530)"/>
     <wire from="(1330,540)" to="(1340,540)"/>
     <wire from="(270,590)" to="(300,590)"/>
@@ -2679,11 +2680,11 @@
     <wire from="(680,550)" to="(680,660)"/>
     <wire from="(680,550)" to="(770,550)"/>
     <wire from="(750,570)" to="(770,570)"/>
-    <wire from="(810,560)" to="(970,560)"/>
+    <wire from="(810,560)" to="(990,560)"/>
     <wire from="(920,540)" to="(1290,540)"/>
     <wire from="(920,540)" to="(920,620)"/>
     <wire from="(920,640)" to="(970,640)"/>
-    <wire from="(920,660)" to="(990,660)"/>
+    <wire from="(920,660)" to="(980,660)"/>
     <wire from="(920,680)" to="(930,680)"/>
     <wire from="(920,700)" to="(940,700)"/>
     <wire from="(920,720)" to="(950,720)"/>
@@ -2691,16 +2692,20 @@
     <wire from="(930,550)" to="(1290,550)"/>
     <wire from="(930,550)" to="(930,680)"/>
     <wire from="(940,570)" to="(940,700)"/>
-    <wire from="(940,570)" to="(970,570)"/>
+    <wire from="(940,570)" to="(990,570)"/>
     <wire from="(940,700)" to="(990,700)"/>
     <wire from="(950,580)" to="(950,720)"/>
-    <wire from="(950,580)" to="(970,580)"/>
+    <wire from="(950,580)" to="(990,580)"/>
     <wire from="(950,720)" to="(990,720)"/>
-    <wire from="(960,590)" to="(960,740)"/>
-    <wire from="(960,590)" to="(970,590)"/>
+    <wire from="(960,600)" to="(960,740)"/>
+    <wire from="(960,600)" to="(990,600)"/>
     <wire from="(960,740)" to="(990,740)"/>
-    <wire from="(970,600)" to="(970,640)"/>
+    <wire from="(970,610)" to="(970,640)"/>
+    <wire from="(970,610)" to="(990,610)"/>
     <wire from="(970,640)" to="(990,640)"/>
+    <wire from="(980,620)" to="(980,660)"/>
+    <wire from="(980,620)" to="(990,620)"/>
+    <wire from="(980,660)" to="(990,660)"/>
   </circuit>
   <circuit name="InstructionOrUAL">
     <a name="appearance" val="logisim_evolution"/>
