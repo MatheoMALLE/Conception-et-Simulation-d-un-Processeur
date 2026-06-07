@@ -4,11 +4,13 @@
 
   <lib desc="#Wiring" name="0">
     <tool name="Splitter">
-      <a name="appear" val="right"/>
-      <a name="facing" val="south"/>
+      <a name="facing" val="west"/>
+      <a name="fanout" val="8"/>
+      <a name="incoming" val="8"/>
     </tool>
     <tool name="Pin">
       <a name="appearance" val="classic"/>
+      <a name="width" val="2"/>
     </tool>
     <tool name="Constant">
       <a name="value" val="0x0"/>
@@ -1697,6 +1699,9 @@
       <a name="label" val="B"/>
       <a name="width" val="8"/>
     </comp>
+    <comp lib="0" loc="(920,680)" name="Constant">
+      <a name="value" val="0x0"/>
+    </comp>
     <comp lib="2" loc="(1000,150)" name="Multiplexer">
       <a name="select" val="3"/>
       <a name="width" val="8"/>
@@ -1775,6 +1780,14 @@
     <wire from="(740,170)" to="(960,170)"/>
     <wire from="(750,180)" to="(750,580)"/>
     <wire from="(750,180)" to="(960,180)"/>
+    <wire from="(920,680)" to="(940,680)"/>
+    <wire from="(940,630)" to="(940,640)"/>
+    <wire from="(940,630)" to="(960,630)"/>
+    <wire from="(940,640)" to="(940,670)"/>
+    <wire from="(940,640)" to="(960,640)"/>
+    <wire from="(940,670)" to="(940,680)"/>
+    <wire from="(940,670)" to="(960,670)"/>
+    <wire from="(940,680)" to="(960,680)"/>
     <wire from="(980,190)" to="(980,290)"/>
     <wire from="(980,290)" to="(1060,290)"/>
     <wire from="(980,690)" to="(980,720)"/>
@@ -1795,20 +1808,24 @@
       <a name="label" val="B"/>
       <a name="width" val="8"/>
     </comp>
-    <comp lib="0" loc="(490,190)" name="Pin">
+    <comp lib="0" loc="(500,140)" name="Constant">
+      <a name="value" val="0x0"/>
+      <a name="width" val="8"/>
+    </comp>
+    <comp lib="0" loc="(560,190)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="facing" val="north"/>
       <a name="label" val="ope"/>
       <a name="width" val="3"/>
     </comp>
-    <comp lib="0" loc="(520,110)" name="Pin">
+    <comp lib="0" loc="(590,110)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="facing" val="west"/>
       <a name="label" val="res"/>
       <a name="output" val="true"/>
       <a name="width" val="8"/>
     </comp>
-    <comp lib="2" loc="(510,110)" name="Multiplexer">
+    <comp lib="2" loc="(580,110)" name="Multiplexer">
       <a name="select" val="3"/>
       <a name="width" val="8"/>
     </comp>
@@ -1848,19 +1865,23 @@
     <wire from="(410,280)" to="(440,280)"/>
     <wire from="(410,350)" to="(450,350)"/>
     <wire from="(410,420)" to="(460,420)"/>
-    <wire from="(410,70)" to="(470,70)"/>
+    <wire from="(410,70)" to="(540,70)"/>
     <wire from="(420,80)" to="(420,140)"/>
-    <wire from="(420,80)" to="(470,80)"/>
+    <wire from="(420,80)" to="(540,80)"/>
     <wire from="(430,90)" to="(430,210)"/>
-    <wire from="(430,90)" to="(470,90)"/>
+    <wire from="(430,90)" to="(540,90)"/>
     <wire from="(440,100)" to="(440,280)"/>
-    <wire from="(440,100)" to="(470,100)"/>
+    <wire from="(440,100)" to="(540,100)"/>
     <wire from="(450,110)" to="(450,350)"/>
-    <wire from="(450,110)" to="(470,110)"/>
+    <wire from="(450,110)" to="(540,110)"/>
     <wire from="(460,120)" to="(460,420)"/>
-    <wire from="(460,120)" to="(470,120)"/>
-    <wire from="(490,150)" to="(490,190)"/>
-    <wire from="(510,110)" to="(520,110)"/>
+    <wire from="(460,120)" to="(540,120)"/>
+    <wire from="(500,140)" to="(530,140)"/>
+    <wire from="(530,130)" to="(530,140)"/>
+    <wire from="(530,130)" to="(540,130)"/>
+    <wire from="(530,140)" to="(540,140)"/>
+    <wire from="(560,150)" to="(560,190)"/>
+    <wire from="(580,110)" to="(590,110)"/>
   </circuit>
   <circuit name="BlocLogiques1Reg">
     <a name="appearance" val="logisim_evolution"/>
@@ -1872,20 +1893,24 @@
       <a name="label" val="A"/>
       <a name="width" val="8"/>
     </comp>
-    <comp lib="0" loc="(750,240)" name="Pin">
+    <comp lib="0" loc="(740,180)" name="Constant">
+      <a name="value" val="0x0"/>
+      <a name="width" val="8"/>
+    </comp>
+    <comp lib="0" loc="(810,240)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="facing" val="north"/>
       <a name="label" val="ope"/>
       <a name="width" val="3"/>
     </comp>
-    <comp lib="0" loc="(790,150)" name="Pin">
+    <comp lib="0" loc="(850,150)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="facing" val="west"/>
       <a name="label" val="res"/>
       <a name="output" val="true"/>
       <a name="width" val="8"/>
     </comp>
-    <comp lib="2" loc="(770,150)" name="Multiplexer">
+    <comp lib="2" loc="(830,150)" name="Multiplexer">
       <a name="select" val="3"/>
       <a name="width" val="8"/>
     </comp>
@@ -1910,26 +1935,27 @@
     <wire from="(320,360)" to="(320,410)"/>
     <wire from="(320,360)" to="(440,360)"/>
     <wire from="(320,410)" to="(440,410)"/>
-    <wire from="(660,110)" to="(730,110)"/>
+    <wire from="(660,110)" to="(790,110)"/>
     <wire from="(660,120)" to="(660,160)"/>
-    <wire from="(660,120)" to="(730,120)"/>
+    <wire from="(660,120)" to="(790,120)"/>
     <wire from="(660,210)" to="(670,210)"/>
     <wire from="(660,260)" to="(680,260)"/>
     <wire from="(660,310)" to="(690,310)"/>
     <wire from="(660,360)" to="(700,360)"/>
     <wire from="(660,410)" to="(710,410)"/>
     <wire from="(670,130)" to="(670,210)"/>
-    <wire from="(670,130)" to="(730,130)"/>
+    <wire from="(670,130)" to="(790,130)"/>
     <wire from="(680,140)" to="(680,260)"/>
-    <wire from="(680,140)" to="(730,140)"/>
+    <wire from="(680,140)" to="(790,140)"/>
     <wire from="(690,150)" to="(690,310)"/>
-    <wire from="(690,150)" to="(730,150)"/>
+    <wire from="(690,150)" to="(790,150)"/>
     <wire from="(700,160)" to="(700,360)"/>
-    <wire from="(700,160)" to="(730,160)"/>
+    <wire from="(700,160)" to="(790,160)"/>
     <wire from="(710,170)" to="(710,410)"/>
-    <wire from="(710,170)" to="(730,170)"/>
-    <wire from="(750,190)" to="(750,240)"/>
-    <wire from="(770,150)" to="(790,150)"/>
+    <wire from="(710,170)" to="(790,170)"/>
+    <wire from="(740,180)" to="(790,180)"/>
+    <wire from="(810,190)" to="(810,240)"/>
+    <wire from="(830,150)" to="(850,150)"/>
   </circuit>
   <circuit name="BlocComparaisons">
     <a name="appearance" val="logisim_evolution"/>
@@ -1945,6 +1971,9 @@
       <a name="appearance" val="NewPins"/>
       <a name="label" val="A"/>
       <a name="width" val="8"/>
+    </comp>
+    <comp lib="0" loc="(510,130)" name="Constant">
+      <a name="value" val="0x0"/>
     </comp>
     <comp lib="0" loc="(560,160)" name="Pin">
       <a name="appearance" val="NewPins"/>
@@ -2013,6 +2042,10 @@
     <wire from="(450,110)" to="(540,110)"/>
     <wire from="(460,120)" to="(460,490)"/>
     <wire from="(460,120)" to="(540,120)"/>
+    <wire from="(510,130)" to="(530,130)"/>
+    <wire from="(530,130)" to="(540,130)"/>
+    <wire from="(530,60)" to="(530,130)"/>
+    <wire from="(530,60)" to="(540,60)"/>
     <wire from="(560,140)" to="(560,160)"/>
     <wire from="(580,100)" to="(600,100)"/>
   </circuit>
@@ -2046,11 +2079,9 @@
       <a name="out_width" val="8"/>
       <a name="type" val="zero"/>
     </comp>
-    <comp lib="0" loc="(830,180)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="facing" val="west"/>
-      <a name="label" val="erreur"/>
-      <a name="output" val="true"/>
+    <comp lib="0" loc="(800,410)" name="Splitter"/>
+    <comp lib="0" loc="(820,200)" name="Constant">
+      <a name="value" val="0x0"/>
     </comp>
     <comp lib="0" loc="(830,80)" name="Pin">
       <a name="appearance" val="NewPins"/>
@@ -2059,10 +2090,20 @@
       <a name="output" val="true"/>
       <a name="width" val="8"/>
     </comp>
+    <comp lib="0" loc="(880,190)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="erreur"/>
+      <a name="output" val="true"/>
+    </comp>
+    <comp lib="1" loc="(850,240)" name="OR Gate">
+      <a name="facing" val="north"/>
+    </comp>
     <comp lib="2" loc="(810,80)" name="Multiplexer">
       <a name="select" val="2"/>
       <a name="width" val="8"/>
     </comp>
+    <comp lib="2" loc="(870,190)" name="Multiplexer"/>
     <comp loc="(690,150)" name="BlocLogiques2Reg"/>
     <comp loc="(690,240)" name="BlocComparaisons"/>
     <comp loc="(690,330)" name="BlocLogiques1Reg"/>
@@ -2097,7 +2138,7 @@
     <wire from="(690,330)" to="(760,330)"/>
     <wire from="(690,60)" to="(710,60)"/>
     <wire from="(690,80)" to="(700,80)"/>
-    <wire from="(700,180)" to="(830,180)"/>
+    <wire from="(700,180)" to="(840,180)"/>
     <wire from="(700,80)" to="(700,180)"/>
     <wire from="(710,60)" to="(710,90)"/>
     <wire from="(710,90)" to="(770,90)"/>
@@ -2109,7 +2150,15 @@
     <wire from="(760,70)" to="(760,330)"/>
     <wire from="(760,70)" to="(770,70)"/>
     <wire from="(790,100)" to="(790,410)"/>
+    <wire from="(790,410)" to="(800,410)"/>
     <wire from="(810,80)" to="(830,80)"/>
+    <wire from="(820,200)" to="(840,200)"/>
+    <wire from="(820,390)" to="(830,390)"/>
+    <wire from="(820,400)" to="(870,400)"/>
+    <wire from="(830,290)" to="(830,390)"/>
+    <wire from="(850,210)" to="(850,240)"/>
+    <wire from="(870,190)" to="(880,190)"/>
+    <wire from="(870,290)" to="(870,400)"/>
   </circuit>
   <circuit name="Registre1bit">
     <a name="appearance" val="logisim_evolution"/>
@@ -2426,7 +2475,7 @@
     <comp lib="0" loc="(1340,540)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="facing" val="west"/>
-      <a name="label" val="Load"/>
+      <a name="label" val="instructionReg"/>
       <a name="output" val="true"/>
       <a name="width" val="2"/>
     </comp>
