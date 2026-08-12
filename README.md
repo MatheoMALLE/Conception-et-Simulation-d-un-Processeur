@@ -11,7 +11,7 @@ This project involves the design, simulation, and programming of a simple proces
 - Logisim
 - python
 
-![Circuit du processeur](documentation/projet_Processeur.png)
+![Circuit du processeur](documentation/projet%20Processeur.png)
 
 ---
 ## Documentation
