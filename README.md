@@ -14,7 +14,7 @@ This project involves the design, simulation, and programming of a simple proces
 ![Circuit du processeur](documentation/projet%20Processeur.png)
 
 ---
-## Documentation
+## 📖 Documentation
 ### Create an instruction list
 1. Edit the `instruction.txt` file with the desired assembly instructions. Example:
 2. From the project root directory, run:
